@@ -1,0 +1,38 @@
+<div>
+    <h1>Time to send sum messages!</h1>
+
+    <p>
+        <form id="messageform" action="/" method="POST">
+            <p>
+                <input type="radio" name="type" value="encrypt" checked> Encrypt <br/>
+                <input type="radio" name="type" value="decrypt"> Decrypt
+            </p>
+            <p>
+                Naam: <input type="text" name="name" placeholder="Vul je naam in.."><br/>
+            </p>
+            <p>
+                Geheime text: <textarea cols="50" rows="10" form="messageform" type="text" name="secrettext" placeholder="Sneaky Beaky like..."></textarea><br/>
+            </p>
+            <p>
+                Wachtwoord: <input type="text" name="password" placeholder="Geef een wachtwoord.."><br/>
+            </p>
+
+            {{#if error}}
+            <p>
+                <div class="error">
+                    {{error}}
+                </div>
+            </p>
+            {{/if}}
+
+            <input type="submit" value="Verstuur!">
+        </form>
+    </p>
+</div>
+
+{{#if result}}
+<div class="result">
+    Result: <br/>
+    <textarea cols="50" rows="10" readonly>{{result}}</textarea>
+</div>
+{{/if}}

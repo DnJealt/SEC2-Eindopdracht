@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font-family: 'Trebuchet MS';
+}
+
+a {
+  color: #00B7FF;
+}
+
+.result {
+  width: 500px;
+}
+
+.error {
+  color: red;
+}
